@@ -1,0 +1,7 @@
+.header {
+    margin: $spacing-m 0 $spacing-xl 0;
+
+    @include respond(phone) {
+        margin: $spacing-s 0 $spacing-m 0;
+    }
+}

@@ -1,0 +1,59 @@
+@import url('https://rsms.me/inter/inter.css');
+html { 
+    font-family: 'Inter', sans-serif;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 153%;
+
+    @include respond(phone) {
+        line-height: 165%;
+    }
+}
+
+@supports (font-variation-settings: normal) {
+  html { 
+      font-family: 'Inter var', sans-serif; 
+    }
+}
+
+* {
+    font-family: 'Inter', sans-serif;
+}
+
+.heading {
+    color: $black;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 70px;
+    line-height: 114%;
+
+    @include respond(phone) {
+        font-size: 48px;
+        line-height: 125%;
+    }
+}
+
+.title {
+    font-style: normal;
+    font-weight: normal;
+    color: $gray-30;
+    font-size: 40px;
+    line-height: 125%;
+
+    @include respond(phone) {
+        font-size: 28px;
+        line-height: 129%;
+        color: $gray-40;
+    }
+}
+
+.subtitle-m {
+    font-size: 32px;
+    line-height: 131%;
+}
+
+.subtitle-s {
+    font-size: 24px;
+    line-height: 142%;
+}

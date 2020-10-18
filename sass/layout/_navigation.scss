@@ -1,0 +1,36 @@
+.navigation {
+    margin: 0 $spacing-s;
+    
+    &__list {
+        display: flex;
+        list-style: none;
+        
+        @include respond(desktop) {
+            justify-content: center;
+        }
+    }
+
+    &__item {
+        &:not(:last-child) {
+            margin-right: $spacing-xs;
+        }
+    }
+
+    &__link {
+        &:link,
+        &:visited {
+            display: block;
+            border: 1px $black solid;
+            border-radius: 18px;
+            padding: 3px 13px 4px 13px;
+            text-decoration: none;
+            color: $black;
+        }
+
+        &:hover,
+        &:active {
+            background-color: $black;
+            color: $white;
+        }
+    }
+}

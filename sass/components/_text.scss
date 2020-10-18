@@ -1,0 +1,18 @@
+.text {
+    @include respond(desktop) {
+        text-align: center;
+    }
+
+    &__link {
+        &:link,
+        &:visited {
+            text-decoration: none;
+            color: $emerald-text;
+        }
+    
+        &:hover,
+        &:active {
+            color: $emerald-40;
+        }
+    }
+}
