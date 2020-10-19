@@ -1,0 +1,14 @@
+.picture-container {
+    &:not(:last-child) {
+        margin-bottom: $spacing-xs;
+
+        @include respond(desktop) {
+            margin-bottom: $spacing-m;
+        }
+    }
+
+    &__image {
+        max-width: 940px;
+        width: 100%;
+    }
+}

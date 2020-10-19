@@ -3,6 +3,10 @@
         text-align: center;
     }
 
+    &:not(:last-child) {
+        margin-bottom: $spacing-s;
+    }
+
     &__link {
         &:link,
         &:visited {

@@ -1,0 +1,62 @@
+.footer {
+    margin: $spacing-xxl 0 $spacing-xl;
+
+    @include respond(desktop) {
+        margin-bottom: $spacing-xxl;
+    }
+
+    &__navigation {
+        display: flex;
+        justify-content: center;
+    }
+
+    &__list {
+        list-style: none;
+        text-align: center;
+    }
+
+    &__item {
+
+        display: inline-block;
+        position: relative;
+        padding: 0 $spacing-m;
+
+        &:not(:last-child) {
+            &::after {
+                content: "";
+                width: 2px;
+                height: 2px;
+                background-color: $gray-40;
+                position: absolute;
+                border-radius: 50%;
+                top: 50%;
+                right: -2px;
+                transform: translateY(-50%);
+            } 
+        }
+
+        @include respond(phone) {
+            &:first-child {
+                display: block;
+                padding: 0;
+                margin-bottom: $spacing-s;
+                &::after {
+                    content: none;
+                }
+            }
+        }
+    }
+
+    &__link {
+        &:link,
+        &:visited {
+            text-decoration: none;
+            color: $gray-40;
+        }
+
+        &:hover,
+        &:active {
+            color: $gray-60;
+        }
+    }
+}
